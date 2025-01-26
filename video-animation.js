@@ -20,7 +20,7 @@ export function videoanimation (){
     videocon.addEventListener("mousemove", function(dets){
         gsap.to(playbtn,{
             left: dets.x-80,
-            top: dets.y-50
+            top: dets.y-80,
         })
     })
 }

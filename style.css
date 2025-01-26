@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::selection {
+    color: white;
+    background-color: black;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+
+#page1 {
+    min-height: 100vh;
+    width: 100vw;
+    position: relative;
+    padding: 0 2vw;
+    padding-top: 20vh;
+}
+
+#page1 h1 {
+    font-family: futura;
+    font-size: 15.4vw;
+    line-height: 14vw;
+    letter-spacing: -6px;
+}
+
+#page1 #video-container {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    margin-top: 2vw;
+    padding-right: 4.5vw;
+}
+
+#video-container video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#video-container #play {
+    position: fixed;
+    font-family: futura;
+    background-color: black;
+    color: #fff;
+    font-size: 1.3vw;
+    font-weight: 100;
+    border-radius: 50%;
+    padding: 3vw 2.3vw;
+    opacity: 0;
+    scale: 0;
+}

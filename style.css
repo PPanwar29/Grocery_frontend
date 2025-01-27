@@ -14,17 +14,25 @@ html, body {
     height: 100%;
 }
 
+body {
+    border-color: #f7f7f7;
+}
+
+@font-face {
+    font-family: a;
+    src: url(./Futura-Bold.ttf);
+}
 
 #page1 {
     min-height: 100vh;
-    width: 100vw;
+    max-width: 100vw;
     position: relative;
     padding: 0 2vw;
     padding-top: 20vh;
 }
 
 #page1 h1 {
-    font-family: futura;
+    font-family: a;
     font-size: 15.4vw;
     line-height: 14vw;
     letter-spacing: -6px;
@@ -32,10 +40,10 @@ html, body {
 
 #page1 #video-container {
     height: 100vh;
-    width: 100vw;
+    max-width: 93.3vw;
     position: relative;
     margin-top: 2vw;
-    padding-right: 4.5vw;
+    margin-left: 1.5vw;
 }
 
 #video-container video {
@@ -46,7 +54,7 @@ html, body {
 
 #video-container #play {
     position: fixed;
-    font-family: futura;
+    font-family: a;
     background-color: black;
     color: #fff;
     font-size: 1.3vw;
@@ -55,4 +63,225 @@ html, body {
     padding: 3vw 2.3vw;
     opacity: 0;
     scale: 0;
+}
+
+#page1-cursor {
+    position: absolute;
+    background-color: rgba(255, 192, 203, 0.808);
+    height: 11vw;
+    width: 11vw;
+    transform: translate(-50%,-50%) scale(0);
+    border-radius: 50%;
+    padding: 3vw 2.3vw;
+    z-index: -2;
+}
+
+#page2 {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 3vw 0;
+    justify-content: space-evenly;
+}
+
+#page2 .elem {
+    height: 100%;
+    max-width: 27%;
+    /* background-color: red; */
+    overflow: hidden;
+    position: relative;
+    object-fit: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#page2 .elem img {
+    height: 100%;
+    width: 100%;
+}
+
+#page2 .elem #dets {
+    background-color: rgba(222, 184, 135, 0.795);
+    width: 19vw;
+    height: 4vw;
+    position: fixed;
+    z-index: 9;
+    border-radius: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* font-style: a; */
+}
+
+#page2 .elem #dets #text {
+    display: flex;
+    align-items: center;
+    font-size: 1vw;
+}
+
+#page2 .elem #dets #item {
+    font-size: 1.4vw;
+    margin-bottom: 4px;
+}
+
+#page3 {
+    height: 70vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+#page3 #left{
+    height: 70vh;
+    width: 65%;
+    text-transform: uppercase;
+    font-family: a;
+    font-size: 2vw;
+    padding: 2vw 4vw;
+    line-height: 1;
+}
+
+#page3 #right {
+    height: 100%;
+    width: 35%;
+    padding: 2vw 3vw;
+}
+
+#page3 #right h2 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 100;
+    font-size: 1.1vw;
+    padding-bottom: 2vw;
+    padding-top: 1vw;
+    margin-right: 6vw;
+}
+
+#page3 #right button {
+    position: relative;
+    font-size: 1vw;
+    font-family: a;
+    padding: 1vw 3vw;
+    border-radius: 100px;
+    border: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.911);
+    margin-top: 3vw;
+}
+
+#page4 {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+#page4-inner {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#page4 .child {
+    /* background-color: crimson; */
+    height: 45vh;
+    width: 70vh;
+    margin-bottom: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#page4 .child img {
+    height: 100%;
+    width: 70%;
+    object-fit: cover;
+    z-index: 3;
+}
+
+#cursor {
+    position: absolute;
+    background-color: rgba(211, 183, 147, 0.267);
+    height: 11vw;
+    width: 11vw;
+    transform: translate(-50%,-50%) scale(0);
+    border-radius: 50%;
+    padding: 3vw 2.3vw;
+    z-index: -2;
+}
+
+
+
+
+@media (max-width: 600px) {
+    
+    #page1 {
+        min-height: 70vh;
+        width: 100%;
+        padding: 0 3.2vw;
+        padding-top: 25vh;
+    }
+
+    #page1 h1 {
+        font-size: 15.5vw;
+        letter-spacing: -3px;
+    }
+
+    #page1 #video-container {
+        height: 25vh;
+        margin-top: 3vw;
+    }
+
+    #video-container #play {
+        position: absolute;
+        color: #ffffffc5;
+        font-size: 5vw;
+        padding: 10vw 7vw;
+        opacity: 1;
+        scale: 1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        
+    }
+
+    #page2 {
+        min-height: 100vh;
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 3vw 3vw;
+        justify-content: space-evenly;
+    }
+
+    #page2 .elem {
+        height: 60vh;
+        max-width: 100%;
+        margin-bottom: 2vw;
+    }
+
+    #page2 .elem #dets {
+        width: 60vw;
+        height: 15vw;
+    }
+
+    #page2 .elem #dets #text {
+        font-size: 3.4vw;
+    }
+    
+    #page2 .elem #dets #item {
+        font-size: 4vw;
+        margin-bottom: 4px;
+        font-weight: 100;
+        color: #000000da;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
 }

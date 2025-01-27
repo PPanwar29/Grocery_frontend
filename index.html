@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="shortcut icon" href="https://pbs.twimg.com/profile_images/1499265096006000640/ZhEnSTch_400x400.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="main">
+        <div id="page1-cursor"></div>
         <div id="page1">
             <h1>CHANGE </h1>
             <h1>THE COURSE</h1>
@@ -19,8 +23,65 @@
             </div>
             
         </div>
+        <div id="page2">
+            <div id="elem1" class="elem">
+                <img data-scroll data-scroll-speed="1" src="https://cdn.sanity.io/images/w8f1ak3c/production/3639fc290272fe62d269e8750eff907b2664fc77-3000x5000.png/1.png?rect=1,0,2999,5000&w=1024&h=1707&auto=format" alt="">
+                <div data-scroll data-scroll-speed="0" id="dets">
+                    <div id="icon"><i class="ri-shopping-cart-line"></i></div>
+                    <div id="text">SHOP</div>
+                    <div id="item">GIFTS</div>
+                </div>
+            </div>
+            <div id="elem2" class="elem">
+                <img data-scroll data-scroll-speed="3" src="https://cdn.sanity.io/images/w8f1ak3c/production/bb84b7106e978c37f5aa92c8d5781751b2e9d9f2-900x1500.png/Rectangle%202.png?w=640&h=1067&auto=format">
+                <div data-scroll data-scroll-speed="2" id="dets">
+                    <div id="icon"><i class="ri-shopping-cart-line"></i></div>
+                    <div id="text">SHOP</div>
+                    <div id="item">CUISINE</div>
+                </div>
+            </div>
+            <div id="elem3" class="elem">
+                <img data-scroll data-scroll-speed="-3" src="https://cdn.sanity.io/images/w8f1ak3c/production/d3151106849ff2494d66916cf554c68a0603444d-902x1500.png/Rectangle%20220.png?rect=1,0,900,1500&w=640&h=1067&fit=min&auto=format">
+                <div data-scroll data-scroll-speed="-2" id="dets">
+                    <div id="icon"><i class="ri-shopping-cart-line"></i></div>
+                    <div id="text">SHOP</div>
+                    <div id="item">COSMETICS</div>
+                </div>
+            </div>
+        </div>
+        <div data-scroll data-scroll-speed="2" id="page3">
+            <div id="left">
+                <h1>We believe in people,<br> until they believe in <br> themselves again.</h1>
+            </div>
+            <div id="right">
+                <h2>Everything we do is designed to rebuild self worth and independence, in order to break free from the cycle of disadvantage.</h2>
+                <h2>With every purchase you make with us, you're helping to change the course of someone's life; you're walking alongside vulnerable women as they find their way home again.</h2>
+                <button>SHOP</button>
+            </div>
+        </div>
+        <div id="page4">
+            <div id="cursor"></div>
+            <div id="page4-inner">
+                <div class="child" id="child1">
+                    <img src="https://cdn.sanity.io/images/w8f1ak3c/production/5ab8af5cab3341a0f327e6959ed036ecbe3dffea-5000x5000.png/Good-Hair-Day-Pack-Expanded-Two-Good-Co.png?w=420&h=420&auto=format" alt="">
+                </div>
+                <div class="child" id="child2">
+                    <img src="https://cdn.sanity.io/images/w8f1ak3c/production/5ff174456e7f3a000b5bcdd6768155d29570c39b-5000x5000.png/Good-Nights-Sleep-Pack-Expanded-Two-Good-Co.png?w=420&h=420&auto=format" alt="">
+                </div>
+                <div class="child" id="child3">
+                    <img src="https://cdn.sanity.io/images/w8f1ak3c/production/3dab242fa3387f3fc93a1663d944ff8fab1d00a7-2900x2900.png/Donate-20-meals-womens-shelter-two-good-co.png?w=420&h=420&auto=format" alt="">
+                </div>
+                <div class="child" id="child4">
+                    <img src="https://cdn.sanity.io/images/w8f1ak3c/production/19c26dbfee7d5deee6abb8bdd25cfe6ff084611f-5000x5000.png/5.png?w=1024&h=1024&auto=format" alt="">
+                </div>
+            </div>
+            
+        </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
     <script type="module" src="app.js"></script>
 </body>
 </html>

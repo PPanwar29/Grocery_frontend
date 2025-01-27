@@ -10,8 +10,7 @@ export function cursoranimation (){
 
     videocon.addEventListener("mouseleave", function(){
         gsap.to(playbtn,{
-            scale: 0,
-            opacity: 0
+            transform: 'translate(-50%,-50%) scale(0)'
         })
     })
 

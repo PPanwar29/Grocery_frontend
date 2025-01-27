@@ -23,12 +23,74 @@ body {
     src: url(./Futura-Bold.ttf);
 }
 
+@font-face {
+    font-family: b;
+    src: url(./Gilroy-Medium.ttf);
+}
+
+#nav {
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    display: flex;
+    justify-content: space-between;
+    align-items: self-start;
+}
+
+#nav-part1 {
+    padding: 1vw 4vw;
+    height: 97px;
+    overflow: hidden;
+}
+
+#nav-part1 svg {
+    display: block;
+}
+
+#nav-part2 {
+    position: relative;
+    display: flex;
+    gap: 5vw;
+    padding-right: 4.5vw;
+}
+
+#nav-part2 #links {
+    display: flex;
+    gap: 5vw;
+    padding: 2.1vw;
+}
+
+#nav-part2 #links a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.918);
+    font-family: b;
+    font-size: 0.9vw;
+}
+
+#nav-part2 #nav-icons {
+    height: 2.7vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1vw;
+    padding: 0 2vw;
+    gap: 5vw;
+    border-radius: 50px;
+    border: none;
+    background-color: #FFFFFF;
+    margin-top: 1.3vw;
+}
+#nav-icons i {
+    font-size: 1vw;
+    font-weight: 100;
+}
+
 #page1 {
     min-height: 100vh;
     max-width: 100vw;
     position: relative;
     padding: 0 2vw;
-    padding-top: 20vh;
+    padding-top: 31vh;
 }
 
 #page1 h1 {
@@ -96,6 +158,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: b;
 }
 
 #page2 .elem img {
@@ -120,11 +183,13 @@ body {
     display: flex;
     align-items: center;
     font-size: 1vw;
+    font-family: b;
 }
 
 #page2 .elem #dets #item {
-    font-size: 1.4vw;
+    font-size: 1.2vw;
     margin-bottom: 4px;
+    font-family: b;
 }
 
 #page3 {
@@ -152,9 +217,10 @@ body {
 }
 
 #page3 #right h2 {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: b;
+    color: #000000e7;
     font-weight: 100;
-    font-size: 1.1vw;
+    font-size: 1.2vw;
     padding-bottom: 2vw;
     padding-top: 1vw;
     margin-right: 6vw;
@@ -167,7 +233,7 @@ body {
     padding: 1vw 3vw;
     border-radius: 100px;
     border: none;
-    color: white;
+    color: rgba(255, 255, 255, 0.959);
     background-color: rgba(0, 0, 0, 0.911);
     margin-top: 3vw;
 }
@@ -189,21 +255,41 @@ body {
 }
 
 #page4 .child {
-    /* background-color: crimson; */
     height: 45vh;
     width: 70vh;
     margin-bottom: 2vw;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    /* border: 2px solid ; */
 }
 
 #page4 .child img {
-    height: 100%;
+    height: 85%;
     width: 70%;
-    object-fit: cover;
+    object-fit: contain;
     z-index: 3;
+    /* border: 2px solid; */
 }
+
+#page4-inner>.child>.text {
+    font-size: 0.9vw;
+    width: 80%;
+    color: #000;
+    font-family: b;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1vw;
+}
+
+.child>.text>a {
+    font-size: 0.7vw;
+    padding-top: 0.4vw;
+}
+
 
 #cursor {
     position: absolute;
@@ -220,7 +306,30 @@ body {
 
 
 @media (max-width: 600px) {
-    
+    #nav-part1 {
+        padding-top: 6vw;
+        height: 110px;
+    }
+
+    #nav-part2 #nav-icons {
+        height: 7vw;
+        padding: 4vw 4vw;
+        gap: 14vw;
+        margin-top: 5vw;
+    }
+
+    #nav-part2 #links {
+        gap: 0;
+        padding: 0;
+        opacity: 0;
+    }
+
+    #nav-icons i {
+        font-size: 5vw;
+    }
+
+
+
     #page1 {
         min-height: 70vh;
         width: 100%;
@@ -266,6 +375,7 @@ body {
         height: 60vh;
         max-width: 100%;
         margin-bottom: 2vw;
+        font-family: b;
     }
 
     #page2 .elem #dets {
@@ -282,6 +392,76 @@ body {
         margin-bottom: 4px;
         font-weight: 100;
         color: #000000da;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-family: b;
     }
+
+    #page3 {
+        height: 60vh;
+        width: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    #page3 #left{
+        height: 20%;
+        width: 100%;
+        font-size: 3.7vw;
+        text-align: center;
+        padding-left: 6vw;
+        font-weight: 600;
+        margin-top: 7vw;
+    }
+    
+    #page3 #right {
+        height: 60%;
+        width: 100%;
+        padding: 2vw 3vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+    
+    #page3 #right h2 {
+        font-size: 4vw;
+        padding: 4vw 3vw;
+        margin-right: 3vw;
+        text-align: center;
+    }
+    
+    #page3 #right button {
+        font-size: 4vw;
+        font-family: a;
+        padding: 3vw 4vw;
+    }
+
+    #page4-inner {
+        min-height: 100vh;
+    }
+    
+    #page4 .child {
+        height: 45vh;
+        width: 100%;
+        margin-bottom: 2vw;
+    }
+    
+    #page4 .child img {
+        height: 85%;
+        width: 90%;
+ 
+    }
+    
+    #page4-inner>.child>.text {
+        font-size: 3.2vw;
+        width: 80%;
+    }
+    
+    .child>.text>a {
+        font-size: 3vw;
+        padding-top: 0.8vw;
+    }
+    
 }
